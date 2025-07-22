@@ -1,0 +1,74 @@
+.quienes-somos {
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+}
+
+.container-quienes {
+  display: flex;
+  flex-direction: column; 
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.columna-izquierda,
+.columna-derecha {
+  width: 100%;
+}
+
+.columna-izquierda img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.columna-derecha h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.columna-derecha p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+@media (min-width: 768px) {
+  .container-quienes {
+    flex-direction: row; 
+    gap: 20px;
+  }
+
+  .columna-izquierda,
+  .columna-derecha {
+    width: 50%; 
+  }
+
+  .columna-derecha {
+    padding-left: 20px;
+  }
+}
+
+/* ----------- CARRUSEL ----------- */
+.carrusel {
+  width: 100%;
+  max-width: 600px; /* Ajusta el tamaño máximo si es necesario */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.contenedor-imagenes {
+  display: flex;
+  transition: transform 1s ease-in-out; /* Transición suave */
+}
+
+.contenedor-imagenes img {
+  width: 100%;  /* Cada imagen ocupará todo el contenedor */
+  max-width: 600px; /* Ajusta el tamaño de las imágenes */
+  object-fit: cover; /* Para que las imágenes se ajusten bien al contenedor */
+  border-radius: 8px; /* Bordes redondeados en las imágenes */
+  flex-shrink: 0; /* Impide que las imágenes se encojan */
+}

@@ -1,0 +1,110 @@
+/* Sidebar */
+#sidebar {
+    height: 100vh;
+    background-color: #000000 !important; /* negro */
+    padding-top: 20px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Enlaces */
+a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+/* Avatar */
+.user-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-avatar i {
+    color: #ffcc00;
+}
+
+/* Usuario */
+.user-info {
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Lista navegación */
+.nav {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+/* Enlaces navegación */
+.nav-link1,
+.nav-link2 {
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Hover */
+.nav-link1:hover {
+    background-color: rgb(194, 206, 226);
+    color: #ffffff;
+}
+
+/* Enlace activo */
+.nav-link1.active {
+    background-color: #ffcc00;
+    color: white !important;
+    font-weight: bold;
+}
+
+/* Iconos opcionales */
+.nav-link1i,
+.nav-link1i2 {
+    font-size: 18px;
+    color: inherit;
+}
+
+/* Hover cerrar sesión */
+.nav-link2:hover {
+    background-color: red;
+    color: #ffffff;
+}
+
+/* Contenido principal */
+main {
+    padding: 20px;
+}
+
+/* ------- Responsivo ------- */
+
+/* Escritorio: sidebar fijo */
+@media (min-width: 768px) {
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 220px;
+        z-index: 100;
+    }
+
+    main {
+        margin-left: 220px;
+    }
+}
+
+/* Móvil: offcanvas automático por Bootstrap */
+@media (max-width: 767.98px) {
+    main {
+        margin-left: 0 !important;
+    }
+}
